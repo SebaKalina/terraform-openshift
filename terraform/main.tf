@@ -118,7 +118,7 @@ module "node" {
   instance_count         = "${var.node_count}"
   service_port_name      = "${var.resource_prefix}-null"
   service_port           = "65535"
-  target_tags            = ["${var.resource_prefix}-nat-${var.gcp_region}", "${var.resource_prefix}-node"]
+  target_tags            = ["${var.resource_prefix}-nat-${var.gcp_region}", "${var.resource_prefix}-nodes"]
   http_health_check      = false
   service_account_scopes = ["${var.gcp_service_account_scopes}"]
   network                = "${module.network.network_name}"
