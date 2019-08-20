@@ -153,7 +153,7 @@ module "database" {
   instance_count         = "2"
   service_port_name      = "${var.resource_prefix}-mysql"
   service_port           = "5432"
-  target_tags            = ["${var.resource_prefix}-nat-${var.gcp_region}", "${var.resource_prefix}-node"]
+  target_tags            = ["${var.resource_prefix}-nat-${var.gcp_region}", "${var.resource_prefix}-db"]
   http_health_check      = false
   service_account_scopes = ["${var.gcp_service_account_scopes}"]
   network                = "${module.network.network_name}"
