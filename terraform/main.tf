@@ -149,7 +149,7 @@ module "database" {
   project                = "${var.gcp_project}"
   region                 = "${var.gcp_region}"
   cluster_zones          = "${var.gcp_cluster_zones}"
-  name                   = "${var.resource_prefix}-okd-db"
+  name                   = "${var.resource_prefix}-db"
   instance_count         = "2"
   service_port_name      = "${var.resource_prefix}-mysql"
   service_port           = "5432"
